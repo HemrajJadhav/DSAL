@@ -25,7 +25,10 @@ class ExpressionsTree {
     Node insertNode(char[] expression, Node root, int i) {
         if (i < expression.length) {
             Node temp = new Node(expression[i]);
-            root = temp;
+
+            if (root == null) {
+                root = temp;
+            }
 
             if (isOperator(expression[i])) {
                 root.left = insertNode(expression, root.left, 2 * i + 1);
@@ -155,9 +158,8 @@ class ExpressionsTree {
                     break;
                 default:
                     System.out.println("Invalid choice! Please enter a valid option.");
-            
-            scan.close();
             }
         } while (choice != 4);
+        scan.close();
     }
 }
