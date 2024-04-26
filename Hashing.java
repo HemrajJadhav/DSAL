@@ -37,6 +37,7 @@ public class Hashing {
             if (choice == 4){
                 System.out.println("Exiting... The program!");
                 System.exit(0);
+                scanner.close();
             }
         }
     }

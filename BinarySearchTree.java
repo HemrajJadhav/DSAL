@@ -110,6 +110,7 @@ class BinaryTree {
                     break;
                 case 4:
                     System.out.println("Exiting...");
+                    scanner.close();
                     System.exit(0);
                 default:
                     System.out.println("Invalid choice!");

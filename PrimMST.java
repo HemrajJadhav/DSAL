@@ -102,5 +102,6 @@ public class PrimMST {
         }
 
         graph.primMST();
+        scanner.close();
     }
 }

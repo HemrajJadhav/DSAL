@@ -86,6 +86,7 @@ public class SetOperationsNew {
                     break;
                 case 0:
                     System.out.println("Exiting program.");
+                    scanner.close();
                     break;
                 default:
                     System.out.println("Invalid choice. Please enter a valid option.");
