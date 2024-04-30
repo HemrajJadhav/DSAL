@@ -33,6 +33,7 @@ public class Hashing {
             }
             if (choice == 3){
                 displayLinearProbing();
+                displayQuadraticProbing();
             }
             if (choice == 4){
                 System.out.println("Exiting... The program!");

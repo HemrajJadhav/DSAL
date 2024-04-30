@@ -31,12 +31,21 @@ public class SetOperationsNew {
 
             switch (choice) {
                 case 1:
+                    
+                    System.out.print("Enter the number of elements in the set(A): ");
+                    int n = scanner.nextInt();
                     System.out.print("Enter element to add to set A: ");
-                    setA.add(scanner.nextInt());
+                    for (int i = 0; i < n; i++) {
+                        setA.add(scanner.nextInt());
+                    }
                     break;
                 case 2:
+                    System.out.print("Enter the number of elements in the set(B): ");
+                    int j = scanner.nextInt();
                     System.out.print("Enter element to add to set B: ");
-                    setB.add(scanner.nextInt());
+                    for (int i = 0; i < j; i++) {
+                        setB.add(scanner.nextInt());
+                    }
                     break;
                 case 3:
                     System.out.print("Enter element to delete from set A: ");

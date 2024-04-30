@@ -18,7 +18,7 @@ class Graph {
         System.out.println("Enter edges (source destination): ");
         for (int i = 0; i < vCount; i++) {
             for (int j = 0; j < vCount; j++) {
-                System.out.print("Enter edge " + (i + 1) + " to " + (j + 1) + ": ");
+                System.out.print("Enter edge " + (i) + " to " + (j + 1) + ": ");
                 adjMatrix[i][j] = scanner.nextInt();
             }
         }
