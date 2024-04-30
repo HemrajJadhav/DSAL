@@ -30,9 +30,13 @@ public class BinarySearchTree2 {
 
             switch (choice) {
                 case 1:
-                    print("Enter the data to insert: ");
-                    data = scanner.nextInt();
-                    root = insert(root, data);
+                    print("Enter the no. of data elments to be inserted: ");
+                    int x = scanner.nextInt();
+                    println("Enter the elements to be inserted seperated by spaces:");
+                    for(int i = 0; i<x ; i++){
+                        data = scanner.nextInt();
+                        root = insert(root, data);
+                    }
                     break;
                 case 2:
                     print("Enter the data to delete: ");
@@ -48,6 +52,7 @@ public class BinarySearchTree2 {
                     break;
                 case 5:
                     System.exit(0);
+                    scanner.close();
                 default:
                     println("Invalid choice. Please try again.");
             }
@@ -101,7 +106,7 @@ public class BinarySearchTree2 {
     static void inorder(Node root) {
         if (root != null) {
             inorder(root.left);
-            System.out.print(root.data + " ");
+            print(root.data + " ");
             inorder(root.right);
         }
     }
@@ -115,7 +120,7 @@ public class BinarySearchTree2 {
 
         while (!queue.isEmpty()) {
             Node temp = queue.poll();
-            System.out.print(temp.data + " ");
+            print(temp.data + " ");
 
             if (temp.left != null)
                 queue.add(temp.left);
