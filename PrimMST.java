@@ -92,9 +92,9 @@ public class PrimMST {
         PrimMST graph = new PrimMST(vertices);
 
         for (int i = 0; i < edges; i++) {
-            System.out.print("ENTER 1ST VERTEX: ");
+            System.out.print("ENTER 1ST VERTEX (A-Z): ");
             char source = scanner.next().charAt(0);
-            System.out.print("ENTER 2ND VERTEX: ");
+            System.out.print("ENTER 2ND VERTEX (A-Z): ");
             char destination = scanner.next().charAt(0);
             System.out.print("ENTER WEIGHT: ");
             int weight = scanner.nextInt();
