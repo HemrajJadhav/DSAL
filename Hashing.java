@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Hashing {
 
     static int size = 10;
-    static Integer[] array1 = new Integer[size];
-    static Integer[] array2 = new Integer[size];
+    static Long[] array1 = new Long[size];
+    static Long[] array2 = new Long[size];
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class Hashing {
 
             if (choice == 1) {
                 System.out.print("Enter Telephone Number : ");
-                int data1 = scanner.nextInt();
+                long data1 = scanner.nextLong();
                 System.out.println();
                 insertLinearProbing(data1);
                 System.out.println();
@@ -25,7 +25,7 @@ public class Hashing {
 
             if (choice == 2) {
                 System.out.print("Enter Telephone Number : ");
-                int data1 = scanner.nextInt();
+                long data1 = scanner.nextLong();
                 System.out.println();
                 search1(data1);
                 search2(data1);
@@ -43,12 +43,12 @@ public class Hashing {
         }
     }
 
-    static void insertLinearProbing(int data) {
+    static void insertLinearProbing(long data) {
         int i = 0;
         int count = 1;
-        int value = (data + i) % size;
+        int value = (int)((data + i) % size);
         while (array1[value] != null) {
-            value = (data + i) % size;
+            value = (int)((data + i) % size);
             i = i + 1;
             count = count + 1;
         }
@@ -57,16 +57,16 @@ public class Hashing {
         System.out.println("Number of comparisons : " + count);
     }
 
-    static void insertQuadraticProbing(int data) {
+    static void insertQuadraticProbing(long data) {
         int i = 0;
         int count = 1;
-        int value = (data + (i * i)) % size;
+        int value = (int)((data + (i * i)) % size);
         while (array2[value] != null) {
             if (count > (2 * size)) {
                 System.out.println("Opps! Index Not Found....");
                 break;
             }
-            value = (data + (i * i)) % size;
+            value = (int)((data + (i * i)) % size);
             i = i + 1;
             count = count + 1;
         }
@@ -97,10 +97,10 @@ public class Hashing {
         System.out.println();
     }
 
-    static void search1(int data) {
+    static void search1(long data) {
         int i = 0;
         int count = 1;
-        int value = (data + (i)) % size;
+        int value = (int)((data + (i)) % size);
         while (array1[value] != null) {
             if (array1[value] == data) {
                 System.out.println("Telephone Number Found (LP)");
@@ -110,7 +110,7 @@ public class Hashing {
                 System.out.println("NO ELEMENT FOUND");
                 break;
             }
-            value = (data + (i)) % size;
+            value = (int)((data + (i)) % size);
             i += 1;
             count += 1;
         }
@@ -120,10 +120,10 @@ public class Hashing {
         }
     }
 
-    static void search2(int data) {
+    static void search2(long data) {
         int i = 0;
         int count = 1;
-        int value = (data + (i * i)) % size;
+        int value = (int)((data + (i * i)) % size);
         while (array2[value] != null) {
             if (array2[value] == data) {
                 System.out.println("Telephone number found (QP)");
@@ -134,7 +134,7 @@ public class Hashing {
                 System.out.println("Opps! Cannot Fetch Index");
                 break;
             }
-            value = (data + (i * i)) % size;
+            value = (int)((data + (i * i)) % size);
             i = i + 1;
             count = count + 1;
         }
